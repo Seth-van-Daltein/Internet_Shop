@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
 
@@ -30,13 +31,10 @@ public class LoginServlet extends HttpServlet {
 		User user = userService.getUserByEmail(email);
 
 		if (user != null && user.getPassword().equals(password)) {
-//			UserLogin userLogin = new UserLogin();
-//			userLogin.destinationUrl = "cabinet.jsp";
-//			userLogin.userEmail = user.getEmail();
-//			String json = new Gson().toJson(userLogin);
-//			response.setContentType("application/json");
-//			response.setCharacterEncoding("UTF-8");
-//			response.getWriter().write(json);
+			HttpSession session = request.getSession(true);
+			session.setAttribute("userId", user.getId());
+			session.setAttribute("role", user.getRole().toString());
+			
 			
 			response.setContentType("text/plain");
 			response.setCharacterEncoding("UTF-8");

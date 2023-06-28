@@ -18,7 +18,7 @@ import ua.lviv.lgs.utils.ConnectionUtils;
 
 public class BucketDaoImpl implements BucketDao {
 	private static String READ_ALL = "select * from bucket";
-	private static String CREATE = "insert into bucket(`user_id`, `product_id`, `purchase_date`) values (?,?,?)";
+	private static String CREATE = "insert into bucket(`userId`, `productId`, `purchaseDate`) values (?,?,?)";
 	private static String READ_BY_ID = "select * from bucket where id =?";
 	private static String DELETE_BY_ID = "delete from bucket where id=?";
 
@@ -61,9 +61,9 @@ public class BucketDaoImpl implements BucketDao {
 			result.next();
 
 			Integer bucketId = result.getInt("id");
-			Integer userId = result.getInt("user_id");
-			Integer productId = result.getInt("product_id");
-			java.util.Date purchaseDate = result.getDate("purchase_date");
+			Integer userId = result.getInt("userId");
+			Integer productId = result.getInt("productId");
+			Date purchaseDate = result.getDate("purchaseDate");
 
 			bucket = new Bucket(bucketId, userId, productId, purchaseDate);
 
@@ -99,9 +99,9 @@ public class BucketDaoImpl implements BucketDao {
 			ResultSet result = preparedStatement.executeQuery();
 			while (result.next()) {
 				Integer bucketId = result.getInt("id");
-				Integer userId = result.getInt("user_id");
-				Integer productId = result.getInt("product_id");
-				java.util.Date purchaseDate = result.getDate("purchase_date");
+				Integer userId = result.getInt("userId");
+				Integer productId = result.getInt("productId");
+				Date purchaseDate = result.getDate("purchaseDate");
 				bucketRecords.add(new Bucket(bucketId, userId, productId, purchaseDate));
 			}
 		} catch (SQLException e) {

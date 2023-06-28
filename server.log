@@ -1,0 +1,10 @@
+2023-06-24 16:41:45 ERROR UserDaoImpl:149 - java.sql.SQLException: Illegal operation on empty result set.
+2023-06-24 16:41:45 ERROR UserDaoImpl:149 - java.sql.SQLException: Illegal operation on empty result set.
+2023-06-24 16:41:46 ERROR UserDaoImpl:149 - java.sql.SQLException: Illegal operation on empty result set.
+2023-06-24 16:41:46 ERROR UserDaoImpl:149 - java.sql.SQLException: Illegal operation on empty result set.
+2023-06-24 20:40:31 ERROR BucketDaoImpl:48 - java.sql.SQLSyntaxErrorException: Unknown column 'user_id' in 'field list'
+2023-06-24 20:40:31 ERROR BucketDaoImpl:48 - java.sql.SQLSyntaxErrorException: Unknown column 'user_id' in 'field list'
+2023-06-24 20:40:32 ERROR BucketDaoImpl:48 - java.sql.SQLSyntaxErrorException: Unknown column 'user_id' in 'field list'
+2023-06-24 20:40:32 ERROR BucketDaoImpl:48 - java.sql.SQLSyntaxErrorException: Unknown column 'user_id' in 'field list'
+2023-06-24 20:41:39 ERROR BucketDaoImpl:48 - java.sql.SQLSyntaxErrorException: Unknown column 'user_id' in 'field list'
+2023-06-24 20:41:44 ERROR BucketDaoImpl:48 - java.sql.SQLSyntaxErrorException: Unknown column 'user_id' in 'field list'

@@ -1,5 +1,6 @@
 package ua.lviv.lgs.domain;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Bucket {
@@ -50,7 +51,7 @@ public class Bucket {
 		return purchaseDate;
 	}
 
-	public void setPurchaseDate(Date purchaseDate) {
+	public void setPurchaseDate(Timestamp purchaseDate) {
 		this.purchaseDate = purchaseDate;
 	}
 
